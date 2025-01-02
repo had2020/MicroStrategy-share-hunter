@@ -1,35 +1,3 @@
-
-/*
-let price;
-
-fetch('https://coinmarketcap.com/currencies/ethereum/', {
-  method: 'GET',
-  headers: { 'Content-Type': 'application/json' }
-})
-.then(response => response.text())
-.then(data => {
-  const phrase = "price today is";
-  if (data.includes(phrase)) {
-    console.log("The phrase 'price today is' was found in the text.");
-    const regex = new RegExp(`${phrase}\\s+\\$([\\d,]+)`);
-    const match = data.match(regex);
-    if (match && match[1]) {
-      price = match[1].toString();
-      console.log(`The price is: $${match[1]}`);
-      console.log(price);
-    } else {
-      console.log("Price not found after the phrase.");
-    }
-  } else {
-    console.log("The phrase 'price today is' was not found in the text.");
-  }
-})
-.catch(error => {
-  console.error('Error fetching data:', error);
-});
-*/
-// /\ fetching code
-
 if (localStorage.getItem("firstgo") != "false") {
   localStorage.setItem("firstgo", "false")
   chrome.tabs.create({
