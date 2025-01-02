@@ -1,17 +1,17 @@
-# BTC Price Hunter Extension
+# MicroStrategy Share Hunter Extension
 
 ## Overview
-BTC Price Hunter is a Chrome extension that tracks the price of Bitcoin (BTC) and displays it on a badge. The extension includes an embedded graph, a settings button, and a settings menu. The badge updates every minute to reflect the latest price.
+MicroStrategy Share Hunter  is a Chrome extension that tracks the price of MircoStrategy shares and displays it on a badge. The extension includes an embedded graph, a settings button, and a settings menu. The badge updates every minute to reflect the latest price.
 
 ## Features
-- **Price Tracking**: Fetches the latest BTC price from CoinMarketCap and displays it on a badge.
+- **Price Tracking**: Fetches the latest MicroStrategy Share Hunter  price from a webstie and displays it on a badge.
 - **Embedded Graph**: Displays an advanced chart from TradingView.
 - **Settings Menu**: Allows users to customize settings such as badge visibility, badge color, and update frequency.
 - **Copy Address**: Provides a button to copy a donation address to the clipboard.
 - **Badge Update**: Updates the badge every minute with the latest BTC price.
 
 ## Installation
-1. Clone the repository from GitHub: `BTC-Price-Hunter-Extension`
+1. Clone the repository from GitHub: `MicroStrategy-share-hunter`
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable "Developer mode" in the top right corner.
 4. Click "Load unpacked" and select the cloned repository folder.
