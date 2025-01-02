@@ -90,20 +90,21 @@ console.log("show_badge: " + show_badge);
 
 if (show_badge == true) {
   //first run
-  fetch('https://coinmarketcap.com/currencies/bitcoin/', {
+  fetch('https://www.marketwatch.com/investing/stock/mstr', {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' }
   })
   .then(response => response.text())
   .then(data => {
-    const phrase = "price today is";
+    const phrase = '<bg-quote class="value" field="Last" format="0,0.00" channel="/zigman2/quotes/202561856/composite,/zigman2/quotes/202561856/lastsale" session="after">';
+    console.log("data: " + data);
     if (data.includes(phrase)) {
-      console.log("The phrase 'price today is' was found in the text.");
-      const regex = new RegExp(`${phrase}\\s+\\$([\\d,]+)`);
+      console.log("The phrase was found in the text.");
+      const regex = new RegExp(`${phrase}([\\d,]+)\\.\\d{2}</bg-quote>`);
       const match = data.match(regex);
       if (match && match[1]) {
-        price = match[1].toString();
-        console.log(`The price is: $${match[1]}`);
+      price = match[1].toString();
+      console.log(`The price is: $${match[1]}`);
         //console.log(price);
         price = price.replace(/,/g, ''); // remove commas
         //kprice = (parseFloat(price) / 1000).toFixed(1)
@@ -199,16 +200,17 @@ setInterval(() => {
   })
   .then(response => response.text())
   .then(data => {
-    const phrase = "price today is";
+    const phrase = '<bg-quote class="value" field="Last" format="0,0.00" channel="/zigman2/quotes/202561856/composite,/zigman2/quotes/202561856/lastsale" session="after">';
+    console.log("data: " + data);
     if (data.includes(phrase)) {
-      console.log("The phrase 'price today is' was found in the text.");
-      const regex = new RegExp(`${phrase}\\s+\\$([\\d,]+)`);
+      console.log("The phrase was found in the text.");
+      const regex = new RegExp(`${phrase}([\\d,]+)\\.\\d{2}</bg-quote>`);
       const match = data.match(regex);
       if (match && match[1]) {
-        price = match[1].toString();
-        console.log(`The price is: $${match[1]}`);
-        console.log(price);
-        price = price.replace(/,/g, '');
+      price = match[1].toString();
+      console.log(`The price is: $${match[1]}`);
+        //console.log(price);
+        price = price.replace(/,/g, ''); // remove commas
         //kprice = (parseFloat(price) / 1000).toFixed(1) // it rounds to 1 decimal
         //kprice = cuttafterfirstdecimal(parseFloat(price) / 1000); // it cuts after first decimal
         //kprice = price
