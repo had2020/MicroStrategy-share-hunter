@@ -1,25 +1,20 @@
 {
-    "name": "MicroStrategy Share Hunter",
-    "description": "BTC Price Tracker",
-    "version": "1.0",
-    "manifest_version": 3,
-    "background": {
-        "service_worker": "background.js"
-    },
-    "action": {
-        "default_popup": "popup.html",
-        "default_icon": "coinlogo.png"
-    },
-    "permissions": [
-        "action",
-        "storage",
-        "activeTab",
-        "scripting"
-    ],
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "css": ["styles.css"]
-        }
-    ]
+  "name": "MicroStrategy Share Hunter",
+  "description": "MicroStrategy Stock Price Tracker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "coinlogo.png"
+  },
+  "permissions": ["action", "storage", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles.css"]
+    }
+  ]
 }
