@@ -1,5 +1,7 @@
 # MicroStrategy Share Hunter Extension
 
+https://chromewebstore.google.com/detail/microstrategy-share-hunte/fbaikabibmggiohlicdfdifaachchbhd?authuser=0
+
 ## Overview
 MicroStrategy Share Hunter  is a Chrome extension that tracks the price of MircoStrategy shares and displays it on a badge. The extension includes an embedded graph, a settings button, and a settings menu. The badge updates every minute to reflect the latest price.
 
